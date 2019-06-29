@@ -5,7 +5,7 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 ## Quick Links
 - Arena Map and locations
 - List of Category Locations
-- List of Official Names
+- [List of Official Names](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Names.pdf)
 - List of Predefined Objects and Categories
 - List of Predefined Questions
 - Scores
