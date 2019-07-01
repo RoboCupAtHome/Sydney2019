@@ -14,6 +14,7 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 
 ## Schedules
 - [Competition main schedule](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Schedule-main.pdf)
+- [Reserved-Arena-Usage Slots Schedule](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Schedule-reserved.pdf)
 - [Robot Inspection and Poster-teaser Session](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Schedule-rips.pdf)
 
 
