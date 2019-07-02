@@ -26,3 +26,8 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 
 - **Q: Regarding [whatever] test...**
     - **A:** _Questions regarding specific tests will be answered during team leader meetings, the day before the test takes place._
+
+## Map
+
+![Map](./Files/maps/arena_sydney_2d.png "Arena with locations")
+![Map3d](./Files/maps/arena_3d.png "Arena rendered")
