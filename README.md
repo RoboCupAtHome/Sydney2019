@@ -5,7 +5,7 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 ## Quick Links
 - [Official Rulebook](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Rulebook.pdf)
 - Arena Map and locations
-- List of Category Locations
+- [List of Category Locations](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Categories.pdf)
 - [List of Official Names](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Names.pdf)
 - [List of Predefined Objects and Categories](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Objects.pdf)
 - [List of Predefined Questions](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Questions.pdf)
@@ -41,5 +41,5 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 1. Connect to the “athome-onboard” network with a laptop.
 2. Go to any website. It will redirect to the Onboarding page.
     - Ask for the login/pass at the OC desk
-3. Once authenticated,  add the device MAC address (the form will autofill with the device MAC that they are currently using), give it a name, pick your team, and save.
+3. Once authenticated,  add the device MAC address (the form will auto-fill with the device MAC that they are currently using), give it a name, pick your team, and save.
 4. Repeat the process with as many devices as needed.
