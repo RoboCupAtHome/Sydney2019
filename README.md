@@ -19,6 +19,7 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 - [Robot Inspection and Poster-teaser Session](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Schedule-rips.pdf)
 
 
+
 ## F.A.Q.
 
 - **Q: There is only one trashbin...**
@@ -34,3 +35,11 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 
 ![Map](./Files/maps/arena_sydney_2d.png "Arena with locations")
 ![Map3d](./Files/maps/arena_3d.png "Arena rendered")
+
+## To register your devices in the team's VPN:
+
+1. Connect to the “athome-onboard” network with a laptop.
+2. Go to any website. It will redirect to the Onboarding page.
+    - Ask for the login/pass at the OC desk
+3. Once authenticated,  add the device MAC address (the form will autofill with the device MAC that they are currently using), give it a name, pick your team, and save.
+4. Repeat the process with as many devices as needed.
