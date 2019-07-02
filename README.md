@@ -21,6 +21,9 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 
 ## F.A.Q.
 
+- **Q: There is only one trashbin...**
+    - ** A:** _Yes, we know. There will be two trash bins available during the test (we will use one from other arena)._
+
 - **Q: When will [whatever] be published?**
     - **A:** _[Soon](https://www.urbandictionary.com/define.php?term=soon) enough. We are recruiting volunteers to release it faster._
 
