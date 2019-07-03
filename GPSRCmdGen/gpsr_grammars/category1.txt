@@ -1,0 +1,367 @@
+##############################################################################
+#
+# Category1 Grammar
+# 
+# Author:  Mauricio Matamoros
+# Date:    April 2017
+#
+# IMPORTANT: 
+# Since this document declares a grammar for generating sentences,
+# NO RECURSIVE rules shall be used.
+# 
+##############################################################################
+
+/********************************************************************
+*
+* FORMAT
+*
+*********************************************************************
+*
+* FILE HEADER
+* ===========================
+* A grammar file must start with the grammar name and tier in the
+* following format:
+*
+* ; grammar name MyGrammar
+* ; grammar tier High
+*
+* Accepted values for the tier are Easy, Moderate, and High.
+*
+* After defining the grammar's name and tier, other grammar files
+* can be imported with the following directives:
+*
+* ; load   path/to/grammar/file.txt
+* ; import path/to/grammar/file.txt
+* ; import path/to/grammar/file.txt as $nonterminal
+*
+* The first directive loads all the non-terminals in the referred
+* grammar file as if they were explicitly in the file being loaded
+* with the same effect of concatenating both files. The second
+* directive acts like the first one but skipping the $Main non-
+* terminal of the second grammar, making non-terminals available for
+* re-use, but not being attached to the production graph. In
+* contrast the third directive makes accessible only the $Main rule
+* of the imported grammar via $nonterminal (other imported rules are
+* internally renamed).
+*
+*
+* Remarks:
+*     - $nonterminal can be any valid non-terminal.
+*     - The path to the grammar file may be enclosed within double
+*       quotes and be a relative path. If the file cannot be found,
+*       a {void} wildcard (see below) will be used, specifying the
+*       nature of the error as meta-data.
+*
+*
+*
+* ROOT
+* ===========================
+* The root rule S of the grammar is the $Main Non-Terminal. In
+* order for the grammar to be valid, it must contain at least
+* one $Main rule.
+*
+*
+*
+* Non-Terminal identifiers
+* ===========================
+* A valid Non-Terminal identifier is a sequence of one or more
+* letters, digits, or underscore characters (_). Spaces, punctuation
+* marks, and symbols cannot be part of a Non-Terminal identifier.
+*
+*
+*
+* Wildcards
+* ===========================
+* Wilcards are strings within braces which are used during random
+* sentence generation, replacing them by random values. The same
+* random value may be specified for a set of wildcards by specifying
+* an ID. Also, the type may be optionally specified. Syntax is as
+* follows:
+*
+*	{wildcard [type] [id] [where condition] [meta:[metadata]]}
+*
+* When the "where" literal string is found within a wildcard, the
+* condition following it is evaluated while looking for replacements
+* (see Filtering Results).
+*
+* When the "meta:" literal string is found within a wildcard, all
+* text following it is addressed as metadata. While metadata is not
+* part of the generated sentence, it can be used to display
+* additional information.
+*
+* The following wildcards are defined:
+*	{category}	An object category.
+*				Types are ignored.
+*	{gesture}	A gesture name.
+*				Types are ignored.
+*	{location}	Any location.
+*				Types may be [room|placement|beacon]
+*	{name}		A person name.
+*				Types may be [male|female]
+*	{object}	An object name.
+*				Types may be [known|alike]
+*	{question}	The "question" literal string.
+*				Types are ignored. Metadata contains a question/answer
+*				from the predefined questions set.
+*	{void}		Void construct used to inject metadata.
+*
+*				Types are ignored.
+*
+*
+* Also, the following alias are defined:
+*
+*	{beacon}	Alias for {location beacon}
+*	{aobject}	Alias for {object alike}
+*	{female}	Alias for {name female}
+*	{kobject}	Alias for {object known}
+*	{male}		Alias for {name male}
+* 	{placement}	Alias for {location placement}
+*	{room}		Alias for {location room}
+*   {sobject}	Alias for {object special}
+*
+*
+*
+* Filtering results
+* ---------------------------
+* Replacements can be filtered by adding conditions after the
+* "where" literal string. Such replacements must target an specific
+* property of the type used for wildcard replacement. For instance,
+* consider the following examples:
+*
+*	{kobject where Category="Food"}
+*	{object where Category="Food" and Type="Known"}
+*
+* Both wildcards are equivalent and will be replaced by a random
+* known object from the Food category, if there is such category.
+* Conditions support wildcard nesting, for which the following
+* example is also valid.
+*
+*	$Main = {object where Category="{category 1}""} belongs to
+*	{category 1 where Name!="Cleaning Stuff"}
+*
+* In cases when the query returns no results, the condition can't
+* be met and another rule will be attempted. This is the case when
+* a property is not present, so it can't be evaluated. Exceptions to
+* this rule are 1) evaluating a property against literal "null"
+* (without quotes), which is evaluated as true when the property is
+* absent; and 2) evaluating an inexistent property against a boolean
+* (true or false), which will implicitly assume that the property exists
+* and has its value set to false.
+*
+*
+*
+*
+* Obfuscating information
+* ===========================
+* A wildcard ended with a question mark will be replaced by an
+* obfuscated value instead of the random value choosen by that
+* wildcard, which will be included as metadata. The obfuscation is
+* performed as follows (wildcards not shown can not be obfuscated):
+*
+*	{category?}	The "objects" literal string
+*	{location?}	The "room" literal string for rooms, for placements
+*               and beacons, the room to which the location belongs.
+*	{object?}	The category to which the object belongs.
+*
+*
+*
+* Referencing
+* ===========================
+*
+* Pronouns
+* ---------------------------
+* Wildcards can be referenced with the {pron} construct.
+* By default, the {pron} construct refers to the last wilcard found
+* in the following order:
+*
+*   - {name}   wildcards
+*   - {object} wildcards
+*   - last wildcard found
+*
+* By default the {pron} construct is replaced with a Personal Pronoun
+* (OBJECTIVE CASE), namely: him, her, it. Subjective cases of the
+* personal pronoun (he, she, it) are also supported by setting the
+* type of the {pron} construct to the `sub` value. Namely:
+*
+*	{pron}		Reference with pronoun, objective case.
+*	{pron obj}	Reference with pronoun, objective case (explicit).
+*	{pron sub}	Reference with pronoun, subjective case.
+*
+* Likewise, possessive pronouns can be specified in both cases,
+* absolute (mine, yours, theirs) and adjective (my, your, their) which
+* is default. Shortcuts are defined for convenience as shown below:
+*
+*	{pron pos}	    Reference with possessive pronoun, adjective case.
+*	{pron pab}	    Reference with possessive pronoun, absolute case.
+*	{pron paj}	    Reference with possessive pronoun, adjective case.
+*	{pron posabs}	Reference with possessive pronoun, absolute case.
+*	{pron posadj}	Reference with possessive pronoun, adjective case.
+*
+*
+*
+* Commenting
+* ===========================
+* C/C++/Java comments are permitted.
+* In addition, any words, spaces, or marks after # or % or ;
+* are ignored
+*
+********************************************************************/
+
+; grammar name GPSR Grammar
+; grammar tier High
+; import common.txt
+
+$Main     = $pmain | $main
+$pmain    = $polite $main
+
+$main     = $fndppl
+$main     = $fndobj
+$main     = $guide
+$main     = $follow
+$main     = $followout
+$main     = $incomplete
+$main     = $man
+$main     = $complexman
+$main     = $partyhost
+
+##############################################################################
+#
+# Production Rules required by common.txt
+#
+##############################################################################
+; Define an object type
+$object   = {object} | bowl | cloth | tray
+
+; Rule for finding a specific (named) person
+$findp    = $vbfind a $pgenders
+$findp    = $vbfind a person {gesture}
+$findp    = $vbfind a person $pose
+
+; A named or described person in the given place
+$whowhere = the person {gesture} in the {room}
+
+
+
+##############################################################################
+#
+# Manipulation
+#
+##############################################################################
+$man      = $deliver
+$deliver  = $vbbtake the {aobject} from the {room} to the {placement 2}
+
+$deliver  = $vbbring me the {aobject} from the {placement}
+$deliver  = $takefrom and ($delivme | $delivat)
+$deliver  = $takefrom and $place
+$deliver  = $vbbtake my $luggage to the $taxi
+
+
+##############################################################################
+#
+# Complex manipulation
+#
+##############################################################################
+$complexman  = $cmanwarn $cmancmd
+
+$cmancmd     = $vbbtake the {kobject} to the {placement 2 meta: Block access to {placement 2} with a movable object or furniture}
+$cmancmd     = $vbbring me the $abspos object $cmanobjsrc
+$cmancmd     = $vbbring me the object $relpos the {object}  $cmanobjsrc
+$cmancmd     = $vbbring me the $oprop (object | {category}) $cmanobjsrc
+$cmancmd     = $vbclean the {room meta: Place 3 objects randomly, at least one on the floor.}
+$cmancmd     = $vbtakeout the $garbage
+$cmanwarn    = {void meta: This command is for DSPL and OPL only}
+$cmanobjsrc  = from the {placement 2 meta: Place at least 5 objects in the {placement 2}}
+
+
+
+##############################################################################
+#
+# Find objects
+#
+##############################################################################
+$fndobj   = $vbfind the {aobject?} in the {room}
+$fndobj   = Tell me how many {category} there are on the {placement}
+$fndobj   = Tell me what's the $oprop object on the {placement}
+$fndobj   = Tell me what's the $oprop {category} on the {placement}
+$fndobj   = $vbfind the {category} in the {room}
+$fndobj   = tell me which are the three $oprop (objects | {category}) on the {placement 1 meta: Place at least 5 objects on the {placement 1}}
+$fndobj   = $vbfind three {category} in the {room meta: Place only 3 objects in the room}
+
+
+##############################################################################
+#
+# Find people
+#
+##############################################################################
+$fndppl   = Tell me the (name | gender | pose) of the person at the {beacon}
+$fndppl   = Tell me the (name | gender | pose) of the person in the {room}
+$fndppl   = tell me how many people in the {room} are ($pgenderp | $pose)
+
+
+##############################################################################
+#
+# Follow [& guide]
+#
+##############################################################################
+$followout   = $fllwoutdest meet {name 1} at the {beacon 1}, $vbfollow {pron}, and $goroom
+$followout   = $fllwoutdest meet {name 1} at the {beacon 1}, $vbfollow {pron}, and $vbguide {pron} back
+
+$fllwoutdest = {void meta: The robot must follow {name 1} outside the arena}
+
+
+##############################################################################
+#
+# Incomplete commands
+#
+##############################################################################
+$incomplete  = $vbfollow {name 1 meta: {name 1} is at the {beacon 1}}
+$incomplete  = $cmanwarn $vbbring me the {object?}
+$incomplete  = $vbdeliver {object?} to $someone
+$incomplete  = $vbguide {name 1 meta: {name 1} is at the {beacon 1}} to the {beacon 2}
+$incomplete  = meet $inguidewho and $vbguide {pron}
+$incomplete  = $gobeacon, meet $inguidewho, and $vbguide {pron}
+
+$inguidewho  = {name 1 meta: {name 1} must be taken from {beacon 1} to {beacon 2}, but he will get lost before reaching it}
+
+
+##############################################################################
+#
+# Party host
+#
+##############################################################################
+$partyhost   = $vbserve (drinks | snacks) to $phpeopler
+$partyhost   = $vbmeet {name} at the $door and introduce {pron} to $phpeopler
+$partyhost   = $vbmeet {name} at the {beacon} and ask {pron} to leave
+$partyhost   = $vbmeet {name 1} at the {beacon 1} and introduce {pron} to {name 2} at the {beacon 2}
+$partyhost   = $vbmeet {name 1} at the {beacon 1} and $vbguide {pron} to {pron pos} $taxi
+$phpeople    = everyone | (all the (people | men | women | guests | elders | children))
+$phpeopler   = $phpeople in the {room meta: There are two people here}.
+
+##############################################################################
+#
+# Rules
+#
+##############################################################################
+; Find people
+$pgenders = man | woman | boy | girl | (male person) | (female person)
+$pgenderp = men | women | boys | girls | male | female
+$pose     = sitting | standing | lying down
+$abspos      = (left | right) most
+$relpos      = at the (left | right) of
+$relpos      = on top of
+$relpos      = above | behind | under
+$garbage     = litter | garbage | trash | waste | debris | junk
+$luggage     = bag | baggage | valise | suitcase | trolley
+$taxi        = taxi | cab | uber
+$door        = ( front | back | main | rear ) (entrance | door)
+
+
+##############################################################################
+#
+# verbs
+#
+##############################################################################
+$vbtakeout   = (take out) | dump
+$vbcleanup   = (clean out) | (clean up) | (tidy op) | neaten | order
+$vbserve     = serve | arrange | deliver | distribute | give | provide
+$vbmeet      = contact | face | find | greet

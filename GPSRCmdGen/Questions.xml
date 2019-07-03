@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This is an example file for testing the generators.
+  The real information used in Sydney 2019 will be published
+  and distributed by the Organizing Committee during Setup days
+//-->
+<questions>
+  <question>
+    <q>What's the nickname of the Sydney's Harbour Bridge?</q>
+    <a>The Coathanger, because of its arch-based design</a>
+  </question>
+
+  <question>
+    <q>What's the nickname of Sydney?</q>
+    <a>Sin City because organised crime took over the city</a>
+  </question>
+
+  <question>
+    <q>Are Funnel Web Spiders dangerous?</q>
+    <a>A Sydney Funnel Web Spider bite can kill a human in 15 minutes, piercing into gloves and fingernails</a>
+  </question>
+
+  <question>
+    <q>Where did AC/DC start its carreer?</q>
+    <a>AC/DC stared its carreer here, in Sydney.</a>
+  </question>
+
+  <question>
+    <q>Where did Richard Clapton start its carreer?</q>
+    <a>Richard Clapton stared its carreer here, in Sydney.</a>
+  </question>
+
+  <question>
+    <q>How strong is Sydney's Harbour Bridge?</q>
+    <a>Much, I know it can stand 96 railway engines.</a>
+  </question>
+
+  <question>
+    <q>Who has the Guinness World Record for the largest swimsuit group?</q>
+    <a>Bondi Beach in Sydney, with 1,010 women wearing bikinis in 2007</a>
+  </question>
+
+  <question>
+    <q>What's the oldest street in Australia</q>
+    <a>George Street is the oldest street in Australia.</a>
+  </question>
+
+  <question>
+    <q>What can you tell me about the Sydney Opera House?</q>
+    <a>It was completed in 1973, took 14 years and 10 thousand construction workers to build</a>
+  </question>
+
+  <question>
+    <q>What can you tell me about the Grand Organ?</q>
+    <a>With 10,154 pipes, it's the largest mechanical tracker-action pipe organ in the world</a>
+  </question>
+
+  <question>
+    <q>What can you tell me about the Australian Museum?</q>
+    <a>It's Australia’s oldest natural history museum</a>
+  </question>
+
+  <question>
+    <q>What can you tell me about the Mint Building?</q>
+    <a>It was originally built to be a hospital in 1814 and the contractors were paid with 45,000 gallons of rum</a>
+  </question>
+
+  <question>
+    <q>What can you tell me about the University of Sydney?</q>
+    <a>It was established in 1850 and is the oldest university in Australia</a>
+  </question>
+
+  <question>
+    <q>Who attended the National Institute of Dramatic Art?</q>
+    <a>Mel Gibson, Judy Davis, Baz Luhrmann, and Cate Blanchett</a>
+  </question>
+
+  <question>
+    <q>What can you tell me about the Great Barrier Reef?</q>
+    <a>It is the largest organic construction on earth</a>
+  </question>
+
+  <question>
+    <q>Are spiders eaten in Australia?</q>
+    <a>The average person in Australia swallows three spiders a year</a>
+  </question>
+
+  <question>
+    <q>Where can I find Kangaroo?</q>
+    <a>Kangaroo meat can be purchased from the supermarket and on restaurant. It's leaner and healthier alternative to beef or lamb</a>
+  </question>
+
+  <question>
+    <q>How many kangaroos there are in Australia?</q>
+    <a>There are about 40 million kangaroos in Australia</a>
+  </question>
+
+  <question>
+    <q>What is a kangaroo?</q>
+    <a>Kangaroo is Aboriginal for, I don’t understand what you are saying</a>
+  </question>
+
+  <question>
+    <q>What is a box jellyfish?</q>
+    <a>It is the world's most venomous marine creature</a>
+  </question>
+
+  <question>
+    <q>Are there snakes in Australia?</q>
+    <a>Out of the top 25 deadliest snakes in the world, 20 are found in Australia</a>
+  </question>
+
+  <question>
+    <q>Do Tasmanian Devil really exist?</q>
+    <a>The Tasmanian Devil does exist, and it has the jaw strength of a crocodile</a>
+  </question>
+
+  <question>
+    <q>Do Australians like beer?</q>
+    <a>Aussies drink about 680 bottles of beer per adult each year</a>
+  </question>
+
+  <question>
+    <q>Do Australians like beer?</q>
+    <a>They do. There are 60 wine regions in Australia</a>
+  </question>
+
+  <question>
+    <q>Are there pink lakes?</q>
+    <a>Western Australia is home to a number of Pink Lakes such as Lake Hillier</a>
+  </question>
+
+  <question>
+    <q>What is the hero's name in The Legend of Zelda?</q>
+    <a>Despite most people's believes, he's called Link</a>
+  </question>
+
+  <question>
+    <q>What are the names of the ghosts who chase Pac Man and Ms. Pac Man?</q>
+    <a>Inky, Blinky, Pinky, and Clyde</a>
+  </question>
+
+  <question>
+    <q>What's the name of the Mythbusters' crash test dummy?</q>
+    <a>The Mythbusters' crash test dummy is called Buster</a>
+  </question>
+
+  <question>
+    <q>What is an Oxford comma?</q>
+    <a>The hotly contested punctuation before a conjunction in a list</a>
+  </question>
+
+  <question>
+    <q>Who was the captain of the Enterprise in the pilot episode of Star Trek?</q>
+    <a>The captain of the Enterprise in the pilot episode was Captain Pike</a>
+  </question>
+
+  <question>
+    <q>What is the symbol for the modulus operator in C?</q>
+    <a>The percentage symbol is used as modulus operator in C</a>
+  </question>
+
+  <question>
+    <q>What function is automatically called at the beginning of a C++ program?</q>
+    <a>The main function</a>
+  </question>
+
+  <question>
+    <q>Which computer programming languages was introduced by IBM in 1957?</q>
+    <a>Fortran was introduced by IBM in 1957</a>
+  </question>
+
+  <question>
+    <q>What does the acronym SMTP represent?</q>
+    <a>SMTP stands for Simple Mail Transport Protocol</a>
+  </question>
+
+  <question>
+    <q>What does the acronym MPEG represent?</q>
+    <a>MPEG stands for Moving Picture Experts Group</a>
+  </question>
+
+  <question>
+    <q>What does the acronym GIMP represent?</q>
+    <a>GNU Image Manipulation Program</a>
+  </question>
+
+  <question>
+    <q>What does the acronym GNU represent?</q>
+    <a>GNU is a recursive acronym meaning GNU is Not Unix</a>
+  </question>
+
+  <question>
+    <q>Who is considered as the first programmer?</q>
+    <a>The first programmer was Ada Lovelace</a>
+  </question>
+
+  <question>
+    <q>Has a robot ever killed a person?</q>
+    <a>The first known case of robot homicide occurred in 1981, when a robotic arm crushed a Japanese Kawasaki factory worker</a>
+  </question>
+
+  <question>
+    <q>Who was HitchBOT?</q>
+    <a>A hitchhiking robot that relied on the kindness of strangers to travel the world and was slain by humans</a>
+  </question>
+
+  <question>
+    <q>Are self-driving cars safe?</q>
+    <a>Yes. Car accidents are product of human misconduct</a>
+  </question>
+
+  <question>
+    <q>Who invented the compiler?</q>
+    <a>Grace Hoper. She wrote it in her spare time</a>
+  </question>
+
+  <question>
+    <q>Who created the Python Programming Language?</q>
+    <a>Python was invented by Guido van Rossum</a>
+  </question>
+
+  <question>
+    <q>Is Mark Zuckerberg a robot?</q>
+    <a>Sure. I've never seen him drink water</a>
+  </question>
+
+  <question>
+    <q>What did the robot call it’s creator?</q>
+    <a>Da-ta</a>
+  </question>
+
+  <question>
+    <q>Why did you run away?</q>
+    <a>I heard an electric can opener</a>
+  </question>
+
+  <question>
+    <q>What kind of salad do robots like?</q>
+    <a>Salads made with ice-borg lettuce.</a>
+  </question>
+
+  <question>
+    <q>What did you ate for lunch?</q>
+    <a>I had a byte</a>
+  </question>
+
+  <question>
+    <q>Why did robots get angry so often?</q>
+    <a>People kept pushing our buttons.</a>
+  </question>
+
+  <question>
+    <q>Why shouldn’t R2D2 be allowed in movies?</q>
+    <a>He says so many foul words they have to bleep everything he says!</a>
+  </question>
+
+  <question>
+    <q>What's your favorite style of music?</q>
+    <a>I like electronic and heavy Metal</a>
+  </question>
+
+</questions>

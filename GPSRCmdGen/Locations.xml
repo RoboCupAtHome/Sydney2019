@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This is an example file for testing the generators.
+  The real information used in Montreal 2018 will be published
+  and distributed by the Organizing Committee during Setup days
+//-->
+<rooms>
+  <room name="bedroom">
+    <location name="bed" isBeacon="true" />
+    <location name="bedroom chest" isPlacement="true" />
+    <location name="sidetable" isPlacement="true" />
+    <location name="shelf" isPlacement="true" />
+  </room>
+  <room name="office">
+    <location name="shoe rack" isBeacon="true" />
+    <location name="safe" isBeacon="true"/>
+    <location name="desk" isBeacon="true" isPlacement="true" />
+    <location name="coat hanger" isBeacon="true" />
+  </room>
+  <room name="living room">
+    <location name="sideboard" isBeacon="true" isPlacement="true"/>
+    <location name="couch" isBeacon="true" />
+    <location name="coffee table" isPlacement="true" />
+    <location name="armchair" isBeacon="true" />
+    <location name="display cabinet" isPlacement="true" />
+    <location name="TV" isBeacon="true" />
+  </room>
+  <room name="kitchen">
+    <location name="fridge" isBeacon="true" />
+    <location name="dishwasher" isPlacement="true" />
+    <location name="sink" isPlacement="true" />
+    <location name="kitchen table" isBeacon="true" isPlacement="true" />
+    <location name="kitchen cabinet" isPlacement="true" />
+    <location name="island" isPlacement="true" />
+  </room>
+</rooms>
+
+

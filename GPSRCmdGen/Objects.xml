@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	This is an example file for testing the generators.
+	The real information used in Sydney 2019 will be published
+	and distributed by the Organizing Committee during Setup days
+//-->
+<categories>
+
+	<category name="candies" defaultLocation="desk" room="office">
+		<object name="biscuit"       type="known" difficulty="easy" />
+		<object name="frosty fruits" type="known" difficulty="moderate" />
+		<object name="snakes"        type="known" difficulty="moderate" />
+	</category>
+
+	<category name="cleaning stuff" defaultLocation="sink" room="kitchen">
+		<object name="cloth"           type="known" difficulty="high" />
+		<object name="dishwasher tab"  type="known" difficulty="high" />
+		<object name="sponge"          type="known" difficulty="moderate" />
+		<object name="trash bags"      type="known" difficulty="easy" />
+	</category>
+
+	<category name="drinks"         defaultLocation="sideboard" room="living room">
+		<object name="beer"            type="known" difficulty="easy" canPour="true" />
+		<object name="chocolate milk"  type="known" difficulty="easy" canPour="true" />
+		<object name="coke"            type="known" difficulty="easy" canPour="true" />
+		<object name="juice"           type="known" difficulty="easy" canPour="true" />
+		<object name="lemonade"        type="known" difficulty="easy" canPour="true" />
+		<object name="tea bag"         type="known" difficulty="high" canPour="true" />
+		<object name="water"           type="known" difficulty="moderate" canPour="true" />
+	</category>
+
+	<category name="food"       defaultLocation="shelf" room="bedroom">
+		<object name="carrot"   type="alike" difficulty="high" />
+		<object name="cereals"  type="known" difficulty="moderate" />
+		<object name="noodles"  type="known" difficulty="easy" />
+		<object name="onion"    type="alike" difficulty="moderate" />
+		<object name="vegemite" type="known" difficulty="easy" />
+	</category>
+
+	<category name="fruits"     defaultLocation="kitchen table" room="kitchen">
+		<object name="apple"  type="alike" difficulty="moderate" />
+		<object name="kiwi"   type="alike" difficulty="moderate" />
+		<object name="lemon"  type="alike" difficulty="moderate" />
+		<object name="orange" type="alike" difficulty="moderate" />
+		<object name="pear"   type="alike" difficulty="moderate" />
+	</category>
+
+	<category name="snacks"         defaultLocation="coffee table" room="living room">
+		<object name="cheetos"        type="known" difficulty="moderate" />
+		<object name="doritos"        type="known" difficulty="easy" />
+		<object name="shapes chicken" type="known" difficulty="moderate" />
+		<object name="shapes pizza"   type="known" difficulty="moderate" />
+		<object name="twisties"       type="known" difficulty="easy" />
+	</category>
+
+	<category name="containers" defaultLocation="kitchen table" room="kitchen">
+		<object name="tray"     type="special" difficulty="high"      canPlaceOn="true" twoHands="true"  />
+		<object name="basket"   type="special" difficulty="high"      canPlaceIn="true" twoHands="true"  />
+		<object name="bag"      type="special" difficulty="easy"      canPlaceIn="true"                  />
+	</category>
+
+	<category name="cutlery"    defaultLocation="kitchen cabinet" room="kitchen">
+		<object name="fork"     type="known" difficulty="high" />
+		<object name="knife"    type="known" difficulty="high" />
+		<object name="spoon"    type="known" difficulty="high" />
+	</category>
+
+	<category name="tableware"  defaultLocation="storage table" room="kitchen">
+		<object name="dish"     type="known" difficulty="moderate" canPlaceOn="true" />
+		<object name="bowl"     type="known" difficulty="moderate" canPourIn="true"  />
+		<object name="cup"    type="known" difficulty="moderate" canPourIn="true"  />
+	</category>
+
+</categories>
+
+
