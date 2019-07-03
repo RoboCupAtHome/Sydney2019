@@ -38,6 +38,10 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 ![Map](./Files/maps/arena_sydney_2d.png "Arena with locations")
 ![Map3d](./Files/maps/arena_3d.png "Arena rendered")
 
+## Special Locations
+- [Start Locations for Party Host tasks in Stage I](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Locations-Partyhost.pdf)
+- [Special Locations for Housekeeper tasks in Stage I](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Locations-Housekeeper1.pdf)
+
 ## To register your devices in the team's VPN:
 
 1. Connect to the “athome-onboard” network with a laptop.
