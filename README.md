@@ -4,12 +4,13 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 
 ## Quick Links
 - [Official Rulebook](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Rulebook.pdf)
-- Arena Map and locations
+- [Arena Map and locations](https://github.com/RoboCupAtHome/Sydney2019/#map)
+    - [Special locations for specific tasks](https://github.com/RoboCupAtHome/Sydney2019/#special-locations)
 - [List of Category Locations](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Categories.pdf)
 - [List of Official Names](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Names.pdf)
 - [List of Predefined Objects and Categories](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Objects.pdf)
 - [List of Predefined Questions](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Questions.pdf)
-- [Schedules](https://github.com/RoboCupAtHome/Sydney2019/blob/master/README.md#Schedules)
+- [Schedules](https://github.com/RoboCupAtHome/Sydney2019/#schedules)
 - Scores
 
 
