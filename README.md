@@ -47,9 +47,6 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 - The location of the coat hanger is changed for Farewell, so that it's close to the exit:
 ![Map](./Files/maps/arena_sydney_2d_coathanger.png "Arena with locations with coat hanger changed.")
 
-## John's Favorite Drink for Receptionist
-- John's favorite drink: Coke
-
 ## To register your devices in the team's VPN:
 
 1. Connect to the “athome-onboard” network with a laptop.
