@@ -42,8 +42,13 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 ## Special Locations
 - [Start Locations for Party Host tasks in Stage I](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Locations-Partyhost1.pdf)
 - [Special Locations for Housekeeper tasks in Stage I](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Locations-Housekeeper1.pdf)
+
+## Coat Hanger Location for Farewell
 - The location of the coat hanger is changed for Farewell, so that it's close to the exit:
 ![Map](./Files/maps/arena_sydney_2d_coathanger.png "Arena with locations with coat hanger changed.")
+
+## John's Favorite Drink for Receptionist
+- John's favorite drink: Coke
 
 ## To register your devices in the team's VPN:
 
