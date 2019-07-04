@@ -11,7 +11,7 @@ Public data for the RoboCup@Home world championship 2019 taking place in Sydney,
 - [List of Predefined Objects and Categories](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Objects.pdf)
 - [List of Predefined Questions](https://github.com/RoboCupAtHome/Sydney2019/blob/master/Files/Questions.pdf)
 - [Schedules](https://github.com/RoboCupAtHome/Sydney2019/#schedules)
-- Scores
+- [Scores](https://github.com/RoboCupAtHome/Sydney2019/tree/master/Scores)
 
 
 ## Schedules
